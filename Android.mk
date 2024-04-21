@@ -1,0 +1,16 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := android-ifaddrs
+
+LOCAL_C_INCLUDES := $(LOCAL_PATH)
+LOCAL_CFLAGS :=
+
+LOCAL_SRC_FILES := ifaddrs.c
+
+LOCAL_SHARED_LIBRARIES := android-ifaddrs
+
+LOCAL_EXPORT_C_INCLUDES += $(LOCAL_C_INCLUDES)
+
+include $(BUILD_SHARED_LIBRARY)
